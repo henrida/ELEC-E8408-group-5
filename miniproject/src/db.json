@@ -19,10 +19,10 @@
       "important": true
     }
   ],
-  "tourguides": [
+  "guides": [
     {
         "id": 1,
-        "full_name": "John Doe"
+        "name": "John Doe"
     }
   ],
   "ports": [

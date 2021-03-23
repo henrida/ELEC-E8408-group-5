@@ -12,3 +12,6 @@ To start the database:
 * Go to "miniproject/src" folder in command prompt
 * Run command "npx json-server --port 3001 --watch --host ip db.json", where ip is replaced with your personal ip address
 * Database will be accessible on http://ip:3001
+
+Additional libraries used:
+* axios
