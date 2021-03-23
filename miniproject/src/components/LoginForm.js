@@ -4,7 +4,17 @@ function LoginForm({Login, error}) {
   const [id, setId] = useState("");
 
   function validateForm() {
-    return id.length > 0;
+    var code, i, len;
+
+    for (i = 0, len = id.length; i < len; i++) {
+        code = id.charCodeAt(i);
+        if (!(code > 47 && code < 58) && // numeric (0-9)
+            !(code > 64 && code < 91) && // upper alpha (A-Z)
+            !(code > 96 && code < 123)) { // lower alpha (a-z)
+            return false;
+        }
+    }
+    return true;
   }
 
   function handleSubmit(event) {
