@@ -30,16 +30,16 @@ const App = () => {
 
   return (
     <div>
-      {(user.name !== "") ? 
+      {(user.name !== "") ? // Logged in page
         <div>
           <h1>Welcome {user.name}</h1>
           <button onClick={() => Logout()}>
             Logout
           </button>
-        </div> :
-        <div>
-          <h1>FinTour webapp</h1>
-          <p>Enter tourguide id to log in:</p>
+        </div> : //Logged out page
+        <div> 
+          <h1>FinTour Webapp</h1>
+          <p>Enter tourguide id to log in</p>
           {(loginError !== "") ? <h2>{loginError}</h2> : ""}
           <LoginForm Login={Login} error={loginError}/>
         </div>
