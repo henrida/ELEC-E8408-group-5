@@ -21,53 +21,90 @@
   ],
   "guides": [
     {
-        "id": 1,
-        "name": "John Doe"
+      "id": 1,
+      "name": "John Doe"
+    },
+    {
+      "id": 2,
+      "name": "Joe Schmoe"
     }
   ],
   "ports": [
-      {
-        "name": "Oulu",
-        "connections": ["Kokkola"]
-      },
-      {
-        "name": "Kokkola",
-        "connections": ["Oulu", "Vaasa"]
-      },
-      {
-        "name": "Vaasa",
-        "connections": ["Kokkola", "Pori"]
-      },
-      {
-        "name": "Pori",
-        "connections": ["Vaasa", "Aland", "Turku"]
-      },
-      {
-        "name": "Aland",
-        "connections": ["Turku"]
-      },
-      {
-        "name": "Turku",
-        "connections": ["Pori", "Helsinki"]
-      },
-      {
-        "name": "Helsinki",
-        "connections": ["Turku", "Hamina"]
-      },
-      {
-        "name": "Hamina",
-        "connections": ["Helsinki"]
-      }
+    {
+      "name": "Oulu",
+      "connections": [
+        "Kokkola"
+      ]
+    },
+    {
+      "name": "Kokkola",
+      "connections": [
+        "Oulu",
+        "Vaasa"
+      ]
+    },
+    {
+      "name": "Vaasa",
+      "connections": [
+        "Kokkola",
+        "Pori"
+      ]
+    },
+    {
+      "name": "Pori",
+      "connections": [
+        "Vaasa",
+        "Aland",
+        "Turku"
+      ]
+    },
+    {
+      "name": "Aland",
+      "connections": [
+        "Turku"
+      ]
+    },
+    {
+      "name": "Turku",
+      "connections": [
+        "Pori",
+        "Helsinki"
+      ]
+    },
+    {
+      "name": "Helsinki",
+      "connections": [
+        "Turku",
+        "Hamina"
+      ]
+    },
+    {
+      "name": "Hamina",
+      "connections": [
+        "Helsinki"
+      ]
+    }
   ],
   "tours": [
     {
-        "id": 1,
-        "guide": 1,
-        "origin": "Helsinki",
-        "destination": "Pori",
-        "current_port": "Helsinki",
-        "next_port": "Turku",
-        "departure_time": "2019-05-30T19:20:14.298Z"
+      "id": 1,
+      "guide": 1,
+      "origin": "Helsinki",
+      "destination": "Pori",
+      "current_port": "Helsinki",
+      "next_port": "not selected",
+      "departure_time": "2021-03-25T14:29:14.036Z",
+      "status": "at port"
+    },
+    {
+      "id": 2,
+      "guide": 2,
+      "origin": "Helsinki",
+      "destination": "Kokkola",
+      "current_port": "Kokkola",
+      "next_port": "Kokkola",
+      "departure_time": "2021-03-25T14:29:08.747Z",
+      "status": "at port"
     }
   ]
 }

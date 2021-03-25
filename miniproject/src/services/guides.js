@@ -1,5 +1,7 @@
 import axios from 'axios'
 const baseUrl = 'http://192.168.1.2:3001/guides'
+// const baseUrl = 'http://127.0.0.1:3001/guides'
+
 
 const getAll = () => {
   return axios.get(baseUrl)
