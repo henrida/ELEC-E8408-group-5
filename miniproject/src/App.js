@@ -17,7 +17,7 @@ const App = () => {
   useEffect(() => {
     console.log('effect')
     axios
-      .get('http://localhost:3001/ports')
+      .get('http://192.168.1.2:3001/ports')
       .then(response => {
         console.log('promise fulfilled')
         console.log(response.data)
