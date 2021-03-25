@@ -58,6 +58,9 @@ const NextPort = ({ tour, handlePortSelect, ports }) => {
     if (tour.current_port === tour.destination) {
         return <p>Next port: Destination port reached</p>
     }
+    if (tour.current_port === "not selected") {
+        return <p>Next port: Select origin port first</p>
+    }
     if (tour.current_port === tour.next_port || tour.next_port === "not selected") {
         let port = ports.find(port => port.name === tour.current_port)
         if (port.connections.find(connection => connection === tour.destination)) {
