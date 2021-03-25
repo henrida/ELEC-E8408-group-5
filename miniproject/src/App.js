@@ -40,10 +40,29 @@ const App = () => {
     })
   }
 
+  const setOrigin = (newOrigin) => {
+    let new_tour = tours[tourIdx]
+    new_tour.origin = newOrigin.value
+    new_tour.current_port = newOrigin.value
+    let new_tours = tours
+    new_tours[tourIdx] = new_tour
+    setNewTours(new_tours)
+  }
+
+  const setDestination = (newDestination) => {
+    let new_tour = tours[tourIdx]
+    new_tour.destination = newDestination.value
+    let new_tours = tours
+    new_tours[tourIdx] = new_tour
+    setNewTours(new_tours)
+  }
+
   const RestartTour = (tour) => {
     let new_tour = tour
     new_tour.status = "at port"
-    new_tour.current_port = new_tour.origin
+    new_tour.origin = "not selected"
+    new_tour.destination = "not selected"
+    new_tour.current_port = "not selected"
     new_tour.next_port = "not selected"
     let new_tours = tours
     new_tours[tourIdx] = new_tour
@@ -116,7 +135,7 @@ const App = () => {
           <button onClick={() => Logout()}>
             Logout
           </button>
-          <RenderTour tour={tours[tourIdx]} handleDepart={HandleDepart} handleArrival={HandleArrival} handlePortSelect={HandlePortSelect} ports={ports} restartTour={RestartTour} />
+          <RenderTour tour={tours[tourIdx]} handleDepart={HandleDepart} handleArrival={HandleArrival} handlePortSelect={HandlePortSelect} ports={ports} restartTour={RestartTour} setDestination={setDestination} setOrigin={setOrigin}/>
         </div> :
         <div>
           <h1>FinTour webapp</h1>
